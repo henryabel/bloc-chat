@@ -1,1 +1,13 @@
-<h1>Home Page</h1>
+<div class="listChat" ng-controller="HomeCtrl">
+    <table>
+        <tr>
+            <th>Bloc Chat</th>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr ng-repeat="room in rooms">
+            <td class="room">{{"Room " + ($index + 1)}}</td>
+        </tr>
+    </table>
+</div>

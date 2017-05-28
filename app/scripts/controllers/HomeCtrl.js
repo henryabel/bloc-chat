@@ -1,4 +1,8 @@
 (function () {
-    function HomeCtrl() {}
-    angular.module('blocChat').controller('HomeCtrl', [HomeCtrl]);
+    function HomeCtrl($scope, Room) {
+        $scope.rooms = Room.all;
+    }
+    angular.module('blocChat').controller('HomeCtrl', ['$scope', 'Room', HomeCtrl]);
 })();
+//ng-repeat="r in x"
+//x[0].$value

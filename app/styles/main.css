@@ -1,0 +1,21 @@
+body,
+html {
+    height: 100%;
+}
+
+td.room {
+    color: dimgray;
+}
+
+div.listChat {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background-color: lightgrey;
+    top: 0;
+    left: 0;
+}
+
+div.listChat th {
+    font-size: 1.3em;
+}
