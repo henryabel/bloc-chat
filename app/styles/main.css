@@ -19,3 +19,12 @@ div.listChat {
 div.listChat th {
     font-size: 1.3em;
 }
+
+div.listChat h3 {
+    display: inline;
+    margin-right: 1em;
+}
+
+div.listChat button {
+    background-color: cyan;
+}

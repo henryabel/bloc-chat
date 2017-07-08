@@ -1,12 +1,8 @@
-<div class="listChat" ng-controller="HomeCtrl">
+<div class="listChat">
+    <h3>Bloc Chat</h3>
+    <button type="button" ng-click="home.open()">New Room</button>
     <table>
-        <tr>
-            <th>Bloc Chat</th>
-        </tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr ng-repeat="room in rooms">
+        <tr ng-repeat="room in home.rooms">
             <td class="room">{{"Room " + ($index + 1)}}</td>
         </tr>
     </table>
