@@ -28,3 +28,41 @@ div.listChat h3 {
 div.listChat button {
     background-color: cyan;
 }
+
+td.room:hover {
+    background-color: black;
+    color: white;
+}
+
+td.room:active {
+    background-color: yellow;
+    color: red;
+}
+
+.clicked {
+    background-color: black;
+    color: white;
+}
+
+div.chatArea {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    right: 0;
+}
+
+div.chatArea input {
+    position: fixed;
+    width: 100%;
+    background-color: antiquewhite;
+    bottom: 0;
+}
+
+div.chatArea h3 {
+    margin-top: 0;
+    background-color: navajowhite;
+    text-align: center;
+    color: darkmagenta;
+}

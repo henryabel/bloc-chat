@@ -1,5 +1,5 @@
 (function () {
-    function HomeCtrl($uibModal, Room) {
+    function HomeCtrl($uibModal, Room, Message) {
         var vm = this;
         vm.rooms = Room.all;
         vm.open = function () {
@@ -8,19 +8,11 @@
                 , controller: 'ModalInstanceCtrl'
                 , controllerAs: '$ctrl'
             });
-            modalInstance.result.then(function onSuccess() {
-                alert("success");
-            }, function onError() {
-                alert("failed");
-            });
         }
-        activate();
-
-        function activate() {
-            console.log("HomeCtrl" + (new Date().getTime()));
-        }
+        vm.loadMessages = function (room) {
+            document.getElementById("roomTitle").innerHTML = room.title;
+            return Message.getByRoomId(room.$id);
+        };
     }
-    angular.module('blocChat').controller('HomeCtrl', ['$uibModal', 'Room', HomeCtrl]);
+    angular.module('blocChat').controller('HomeCtrl', ['$uibModal', 'Room', 'Message', HomeCtrl]);
 })();
-//ng-repeat="r in x"
-//x[0].$value

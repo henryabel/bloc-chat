@@ -3,7 +3,14 @@
     <button type="button" ng-click="home.open()">New Room</button>
     <table>
         <tr ng-repeat="room in home.rooms">
-            <td class="room">{{"Room " + ($index + 1)}}</td>
+            <td class="room" ng-click="home.loadMessages(room);">{{room.title}}</td>
         </tr>
     </table>
 </div>
+<div class="chatArea">
+    <h3 id="roomTitle"></h3>
+    <div id="message" ng-repeat="message in home.messages">
+        <div>{{2 + 2}}</div>
+    </div>
+</div>
+<!--<input ng-submit="" type="text">-->
