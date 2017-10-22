@@ -3,14 +3,16 @@
     <button type="button" ng-click="home.open()">New Room</button>
     <table>
         <tr ng-repeat="room in home.rooms">
-            <td class="room" ng-click="home.loadMessages(room);">{{room.title}}</td>
+            <td class="room" ng-click="home.setActiveRoom(room);">{{room.title}}</td>
         </tr>
     </table>
 </div>
 <div class="chatArea">
     <h3 id="roomTitle"></h3>
-    <div ng-repeat="message in home.messages">
-        <div>{{2 + 2}}</div>
+    <div id="message" ng-repeat="message in home.messages" ng-style="$index%2!=0 ? {'backgroundColor':'white'} : {'backgroundColor':'lightblue'}">
+        <div id="username">{{message.username}}</div>
+        <div id="sentAt"> {{message.sentAt | date:'short'}} </div>
+        <div id="content">{{message.content}}</div>
     </div>
 </div>
 <!--<input ng-submit="" type="text">-->

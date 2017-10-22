@@ -66,3 +66,29 @@ div.chatArea h3 {
     text-align: center;
     color: darkmagenta;
 }
+
+#message {
+    padding: 6px;
+    margin-bottom: 4px;
+    border: 2px solid black;
+    border-radius: 25px;
+    font-family: serif;
+}
+
+#username {
+    font-weight: bold;
+    display: inline;
+    float: left;
+}
+
+#sentAt {
+    display: inline;
+    float: right;
+    font-style: italic;
+    padding-right: 20px;
+}
+
+#content {
+    clear: both;
+    display: block;
+}
