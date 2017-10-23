@@ -1,6 +1,5 @@
 (function () {
     function Message($firebaseArray) {
-        console.log("in message");
         var tempRoomId1 = "-Kwx2shcvslekPFi-lyC";
         var tempRoomId2 = "-Kwx2u7ZbwL2YwJpyDK4";
         var tempRoomId3 = "-Kwx2wPJPoZIZWFXoxah";
@@ -21,10 +20,10 @@
                 });
             }
             //create sample messages
-        for (var i = 0; i < 2; i++) {
-            Message.add();
-        }
-        return Message;
+            /*for (var i = 0; i < 4; i++) {
+                Message.add();
+            }
+            return Message;*/
     };
     angular.module('blocChat').factory('Message', ['$firebaseArray', Message]);
 })();
