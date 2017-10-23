@@ -15,6 +15,7 @@
             vm.messages = Message.getByRoomId(room.$id);
         }
     }
-    angular.module('blocChat').controller('HomeCtrl', ['$uibModal', 'Room', 'Message'
+    angular.module('blocChat').controller('HomeCtrl', ['$uibModal'
+        , 'Room', 'Message'
         , HomeCtrl]);
 })();
