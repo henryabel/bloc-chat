@@ -8,6 +8,8 @@
             url: '/'
             , controller: 'HomeCtrl as home'
             , templateUrl: 'templates/home.html'
+        }).state('cookies', {
+            controller: 'BlocChatCookies as bcc'
         });
     }
     angular.module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap', 'ngCookies']).config(config);
