@@ -1,5 +1,5 @@
 (function () {
-    function Message($firebaseArray) {
+    function Message($firebaseArray, $cookies) {
         var Message = {};
         var ref = firebase.database().ref().child("messages")
         var messages = $firebaseArray(ref);
@@ -8,7 +8,7 @@
         };
         Message.send = function (roomId, content) {
             messages.$add({
-                username: "<USERNAME HERE>"
+                username: $cookies.get('blocChatCurrentUser')
                 , content: content
                 , sentAt: new Date().getTime()
                 , roomId: roomId
@@ -16,5 +16,5 @@
         }
         return Message;
     };
-    angular.module('blocChat').factory('Message', ['$firebaseArray', Message]);
+    angular.module('blocChat').factory('Message', ['$firebaseArray', '$cookies', Message]);
 })();
