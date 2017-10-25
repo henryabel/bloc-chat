@@ -1,10 +1,10 @@
 <div class="modal-header">
-    <h3 class="modal-title" id="modal-title">{{$ctrl.title}}</h3> </div>
-<div class="modal-body" id="modal-body">
+    <h3 class="modal-title">Set a username</h3> </div>
+<div class="modal-body">
     <div>
-        <p>Set a username</p>
-        <input type="text" ng-model="$ctrl.roomName"> </div>
+        <p>This name will appear when you send messages</p>
+        <input type="text" ng-model="$ctrl.userName"> </div>
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" type="button" ng-click="$ctrl.createRoom($ctrl.roomName)">Set username</button>
+    <button class="btn btn-primary" type="button">Set username</button>
 </div>

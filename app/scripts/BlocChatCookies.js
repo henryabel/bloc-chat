@@ -1,12 +1,15 @@
 (function () {
-    console.log("in cookies");
-
     function BlocChatCookies($cookies, $uibModal) {
-        console.log("in cookies");
+        //$cookies.put('blocChatCurrentUser', 'Henry');
+        $cookies.remove('blocChatCurrentUser');
         var currentUser = $cookies.get('blocChatCurrentUser');
+        console.log(currentUser);
         if (!currentUser || currentUser === '') {
             $uibModal.open({
-                // Modal configuration object properties
+                templateUrl: '/templates/unModal.html'
+                    //, controller: 'ModalInstanceCtrl'
+                    
+                , controllerAs: '$ctrl'
             })
         }
     }
