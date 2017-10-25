@@ -70,16 +70,15 @@ div.chatArea button {
 }
 
 div.chatArea h3 {
-    margin-top: 0;
+    margin: 0;
     background-color: navajowhite;
     text-align: center;
     color: darkmagenta;
+    border-bottom: 0.5px solid black;
 }
 
 #message {
-    padding: 6px;
-    margin-bottom: 4px;
-    border: 2px solid black;
+    border-bottom: 0.5px solid black;
     font-family: serif;
 }
 

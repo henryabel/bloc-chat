@@ -8,13 +8,13 @@
     </table>
 </div>
 <div class="chatArea">
-    <h3 id="roomTitle"></h3>
-    <div id="message" ng-repeat="message in home.messages" ng-style="$index%2!=0 ? {'backgroundColor':'white'} : {'backgroundColor':'lightblue'}">
+    <h3 id="roomTitle">{{home.roomTitle}}</h3>
+    <div id="message" ng-repeat="message in home.messages" ng-style="$index%2!=0 ? {'backgroundColor':'antiquewhite'} : {'backgroundColor':'lightblue'}">
         <div id="username">{{message.username}}</div>
         <div id="sentAt"> {{message.sentAt | date:'short'}} </div>
         <div id="content">{{message.content}}</div>
     </div>
     <form ng-submit="home.enter()">
-        <input id="userMessage" type="text"> </form>
+        <input id="userMessage" type="text" ng-model="home.userMessage"> </form>
     <button id="Send" ng-click="home.enter()">Send</button>
 </div>
